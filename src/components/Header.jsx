@@ -10,7 +10,7 @@ function Header() {
       <Container className="d-flex flex-wrap align-items-center justify-content-center  py-3 border-bottom">
         <Navbar.Brand
           href="/"
-          className="d-flex align-items-center text-dark text-decoration-none fs-4"
+          className="d-flex align-items-center text-dark text-decoration-none fs-4 me-0 "
         >
           Earworm 👂🐛
         </Navbar.Brand>
