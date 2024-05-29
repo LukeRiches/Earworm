@@ -12,6 +12,20 @@
   scale: 0.7;
 }
 
+.nav-button-link {
+  margin: 0 0.5rem;
+}
+
+/* Styling for login and signup if using collapse navbar */
+#login-and-signup-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+/* section {
+  padding-top: 90px;
+} */
+
 #Toggler:focus {
   box-shadow: 0 0 0 0.1rem;
 }
@@ -22,44 +36,243 @@
 
 .link-animation {
   text-decoration: none !important;
-  display: inline-block;
-  padding-bottom: 2px;
-  background-image: linear-gradient(var(--bs-alert-link-color) 0 0);
-  background-position: 0 100%; /*OR bottom left*/
-  background-size: 0% 2px;
-  background-repeat: no-repeat;
-  transition: background-size 0.3s, background-position 0s 0.3s; /*change after the size immediately*/
+  display: inline-block !important;
+  /* padding-bottom: 2px !important; */
+  background-image: linear-gradient(#495057 0 0) !important;
+  background-position: 0 100% !important; /*OR bottom left*/
+  background-size: 0% 2px !important;
+  background-repeat: no-repeat !important;
+  transition: background-size 0.3s, background-position 0s 0.3s !important; /*change after the size immediately*/
 }
 
 .link-animation:hover {
-  background-position: 100% 100%; /*OR bottom right*/
-  background-size: 100% 2px;
+  background-position: 100% 100% !important; /*OR bottom right*/
+  background-size: 100% 2px !important;
 }
 
-@media only screen and (max-width: 576px) {
-  /* .navbar-nav {
-    align-items: flex-start;
-    margin-left: auto !important;
-    margin-right: auto !important;
+.link-animation:active {
+  background-position: 100% 100% !important; /*OR bottom right*/
+  background-size: 100% 2px !important;
+}
+
+.gradient-link-animation {
+  /* color: black; */
+  text-decoration: none;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0)),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.gradient-link-animation:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+.gradient-link-animation:active {
+  background-size: 0 3px, 100% 3px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  /* font-size: 18px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide:hover {
+  .card-img-overlay {
+    opacity: 75%;
+    transition: 0.33s ease all;
   }
-
-  #basic-nav-dropdown {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  } */
 }
 
-@media only screen and (max-width: 1420px) {
-  /* .navbar-nav {
-    align-items: flex-start;
-    margin-right: 3rem !important;
-    margin-left: 3rem !important;
-  } */
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+#features-swiper {
+  width: 95%;
+}
+
+#Explicit-Logo {
+  width: 30%;
+  margin-left: auto;
+}
+
+.card-img-overlay {
+  top: 0 !important;
+  right: 0 !important;
+  bottom: auto !important;
+  left: auto !important;
+  padding: 0.75rem !important;
+  /* border-radius: 50% !important; */
+  /* border-radius: var(--bs-card-inner-border-radius); */
+  /* background: white !important; */
+  /* margin: 0.5rem !important; */
+  background: none;
+  border: none;
+  font-family: Roboto Mono, "Apple Color Emoji";
+  font-size: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1em;
+  opacity: 0%;
+  transition: 0.33s ease all;
+}
+
+.card-img-overlay:hover {
+  opacity: 100% !important;
+  transition: 0.33s ease all;
+}
+
+.card-img-overlay:active {
+  opacity: 100% !important;
+  transition: 0.33s ease all;
+}
+
+.card-img-overlay:focus-visible {
+  opacity: 75% !important;
+  transition: 0.33s ease all;
+}
+
+#pause-button {
+  opacity: 75% !important;
+  transition: 0.33s ease all;
+}
+
+#pause-button:hover {
+  opacity: 100% !important;
+  transition: 0.33s ease all;
+}
+
+#pause-button:hover {
+  opacity: 100% !important;
+  transition: 0.33s ease all;
+}
+
+.previewControls {
+  font-size: 40px;
+  opacity: 75%;
+}
+
+.explicit-icon {
+  vertical-align: text-bottom;
+}
+
+#dropdown-basic-button {
+  --bs-btn-padding-x: 0 !important;
+  --bs-btn-padding-y: 0 !important;
+  --bs-btn-font-size: none !important;
+  background: none !important;
+  border: none !important;
+}
+
+#dropdown-basic-button:hover {
+  background: none !important;
+  border: none !important;
+}
+
+.swiper-slide img {
+  height: auto !important;
+}
+
+.card {
+  border: none !important;
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: #007aff;
+}
+
+#Chart-Number {
+  margin-bottom: 0 !important;
+  margin-right: auto !important;
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+#Track-Cover {
+  border-radius: var(--bs-card-inner-border-radius);
 }
 
 @media only screen and (max-width: 1200px) {
   #Welcome {
     white-space: normal;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .card-img-overlay {
+    padding: 0.75rem !important;
+    font-size: 3vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .card-img-overlay {
+    padding: 0.75rem !important;
+    font-size: 3.5vh;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .card-img-overlay {
+    padding: 0.75rem !important;
+    font-size: 4.5vh;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .card-img-overlay {
+    padding: 0.6rem !important;
+    font-size: 3.5vh;
   }
 }
