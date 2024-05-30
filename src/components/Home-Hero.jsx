@@ -5,7 +5,7 @@ function HomeHero() {
     <div className="px-4 py-3 my-3 text-center" id="HomeHero">
       <h1 className="display-5 fw-bold">Hey You! 😉</h1>
       <h2 className="fs-3" id="Welcome">
-        Welcome to Earworm, the bridge between streaming services.
+        Welcome to Catchy, the bridge between streaming services.
       </h2>
       <div className="col-xl-6 mx-auto">
         {/* <p className="lead mb-4">

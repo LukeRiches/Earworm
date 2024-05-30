@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Card from "react-bootstrap/Card";
 import Placeholder from "react-bootstrap/Placeholder";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation, Keyboard } from "swiper/modules";
+import { Autoplay, Keyboard } from "swiper/modules";
 import cardPlaceHolder from "../assets/Card-Place-Holder.jpg";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -192,6 +192,7 @@ function ChartsCarousel({ charts, isLoading, error }) {
     return (
       <div>
         <Swiper
+          touchStartPreventDefault={false}
           className="prevent-select"
           slidesPerView={2}
           spaceBetween={10}

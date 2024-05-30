@@ -15,7 +15,7 @@ function Header() {
     //       href="/"
     //       className="d-flex align-items-center text-dark text-decoration-none fs-4 me-0 "
     //     >
-    //       Earworm 👂🐛
+    //       Catchy 🔊👂
     //     </Navbar.Brand>
     //   </Container>
     // </Navbar>
@@ -23,7 +23,7 @@ function Header() {
     //Header with all links, login and sign-up
     <Navbar
       expand="md"
-      bg="light"
+      bg="white"
       data-bs-theme="light"
       sticky="top"
       // fixed="top"
@@ -33,7 +33,7 @@ function Header() {
           href="/"
           className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none fs-4"
         >
-          Earworm 👂🐛{" "}
+          Catchy👂🎶
         </Navbar.Brand>
 
         <Navbar.Toggle
