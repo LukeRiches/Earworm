@@ -5,7 +5,7 @@ function AboutHero() {
     <div className="px-4 py-3 my-3 text-center" id="AboutHero">
       <h1 className="display-5 fw-bold">About Earworm</h1>
       <h2 className="fs-3" id="Welcome">
-        Earworm is an indie web app developed by&nbsp;
+        Catchy is an indie web app developed by&nbsp;
         <a
           href="https://luke-riches.netlify.app/"
           target="_blank"
