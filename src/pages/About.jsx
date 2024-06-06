@@ -3,7 +3,7 @@ import Features from "../components/Features";
 
 function About() {
   return (
-    <section>
+    <section className="mb-5">
       <Hero></Hero>
       <Features></Features>
     </section>
