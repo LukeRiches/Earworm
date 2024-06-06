@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 function AboutHero() {
   return (
     <div className="px-4 py-3 my-3 text-center" id="AboutHero">
-      <h1 className="display-5 fw-bold">About Earworm</h1>
+      <h1 className="display-5 fw-bold">About Catchy</h1>
       <h2 className="fs-3" id="Welcome">
         Catchy is an indie web app developed by&nbsp;
         <a
-          href="https://luke-riches.netlify.app/"
+          href="https://lukeriches.com/"
           target="_blank"
           className="alert-link gradient-link-animation"
         >
