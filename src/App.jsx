@@ -8,7 +8,8 @@ import Login from "./pages/Login.jsx";
 import SignUp from "./pages/Sign-Up.jsx";
 import Profile from "./pages/Profile.jsx";
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "./Firebase";
+import { doc, getDoc } from "firebase/firestore";
+import { auth, db } from "./Firebase";
 import Settings from "./pages/Settings.jsx";
 import UpdateEmail from "./pages/Update-Email.jsx";
 import UpdatePassword from "./pages/Update-Password.jsx";
@@ -17,11 +18,23 @@ import DeleteAccount from "./pages/Delete-Account.jsx";
 function App() {
   const [signedIn, setSignedIn] = useState(undefined);
   const [buttonsDisabled, setButtonsDisabled] = useState(false);
+  const [user, setUser] = useState(undefined);
+  const [userData, setUserData] = useState(undefined);
+
+  const getUserData = async (user) => {
+    const docRef = doc(db, "users", user.uid);
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+      setUserData(docSnap.data());
+    }
+  };
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setSignedIn(true);
+        setUser(user);
+        getUserData(user);
       } else {
         setSignedIn(false);
       }

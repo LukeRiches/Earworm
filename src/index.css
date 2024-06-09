@@ -343,6 +343,14 @@ a {
   transition: 0.33s ease all;
 }
 
+input::-webkit-datetime-edit-day-field:focus,
+input::-webkit-datetime-edit-month-field:focus,
+input::-webkit-datetime-edit-year-field:focus {
+  background-color: rgb(232, 240, 254) !important;
+  color: black;
+  outline: none;
+}
+
 @media only screen and (max-width: 1200px) {
   #Welcome {
     white-space: normal;

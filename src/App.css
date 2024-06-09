@@ -1,0 +1,7 @@
+input::-webkit-datetime-edit-day-field:focus,
+input::-webkit-datetime-edit-month-field:focus,
+input::-webkit-datetime-edit-year-field:focus {
+  background: none !important;
+  /* color: black;
+  outline: none; */
+}

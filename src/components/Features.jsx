@@ -82,51 +82,6 @@ function Features({}) {
               <div className="col">
                 <div className="d-flex flex-column row row-cols-1 row-cols-sm-2 g-4">
                   <div className="col d-flex flex-column gap-2 w-auto">
-                    <h3 className="me-auto mb-0 display-6">🪧</h3>
-                    <h4 className="fw-semibold mb-0 text-body-emphasis me-auto">
-                      Sign Up
-                    </h4>
-                  </div>
-
-                  <div className="col d-flex flex-column gap-2 w-auto">
-                    <h3 className="me-auto mb-0 display-6">🪵</h3>
-
-                    <h4 className="fw-semibold mb-0 text-body-emphasis me-auto">
-                      Log In
-                    </h4>
-                  </div>
-
-                  <div className="col d-flex flex-column gap-2 w-auto">
-                    <h3 className="me-auto mb-0 display-6">⚙️</h3>
-
-                    <h4 className="fw-semibold mb-0 text-body-emphasis me-auto">
-                      User Settings
-                    </h4>
-                    <p className="text-body-secondary me-auto text-start">
-                      Allow users to update their account or delete it as
-                      needed.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="container px-4 py-5 mx-auto">
-            <div className="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
-              <div className="col d-flex flex-column align-items-start gap-2">
-                <h2 className="fw-bold text-body-emphasis text-start">
-                  In Development &nbsp;🔨
-                </h2>
-                <p className="text-start">
-                  The full integration of authentication through Firebase
-                </p>
-              </div>
-
-              <div className="col">
-                <div className="d-flex row row-cols-1 row-cols-sm-2 g-4">
-                  <div className="col d-flex flex-column gap-2 w-auto">
                     <h3 className="me-auto mb-0 display-6">💃🕺 </h3>
                     <h4 className="fw-semibold mb-0 text-body-emphasis me-auto">
                       Profiles for Fans
@@ -146,17 +101,30 @@ function Features({}) {
                       Sign up and share your upcoming gigs with the community!
                     </p>
                   </div>
+
+                  <div className="col d-flex flex-column gap-2 w-auto">
+                    <h3 className="me-auto mb-0 display-6">⚙️</h3>
+
+                    <h4 className="fw-semibold mb-0 text-body-emphasis me-auto">
+                      User Settings
+                    </h4>
+                    <p className="text-body-secondary me-auto text-start">
+                      Allow users to update their account or delete it as
+                      needed.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </SwiperSlide>
+
         <SwiperSlide>
           <div className="container px-4 py-5 mx-auto">
             <div className="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
               <div className="col d-flex flex-column align-items-start gap-2">
                 <h2 className="fw-bold text-body-emphasis text-start">
-                  Coming Soon &nbsp;🗓️
+                  In Development &nbsp;🔨
                 </h2>
               </div>
 
