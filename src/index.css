@@ -195,7 +195,31 @@ a {
   vertical-align: text-bottom;
 }
 
-#dropdown-basic-button {
+#unstyled-button {
+  --bs-btn-padding-x: 0 !important;
+  --bs-btn-padding-y: 0 !important;
+  --bs-btn-font-size: none !important;
+  background: none !important;
+  border: none !important;
+  opacity: 75% !important;
+  transition: 0.33s ease all;
+}
+
+#unstyled-button:hover {
+  background: none !important;
+  border: none !important;
+  opacity: 100% !important;
+  transition: 0.33s ease all;
+}
+
+#unstyled-button:active {
+  background: none !important;
+  border: none !important;
+  opacity: 100% !important;
+  transition: 0.33s ease all;
+}
+
+#unstyled-dropdown {
   --bs-btn-padding-x: 0 !important;
   --bs-btn-padding-y: 0 !important;
   --bs-btn-font-size: none !important;
@@ -203,7 +227,12 @@ a {
   border: none !important;
 }
 
-#dropdown-basic-button:hover {
+#unstyled-dropdown:hover {
+  background: none !important;
+  border: none !important;
+}
+
+#unstyled-dropdown:active {
   background: none !important;
   border: none !important;
 }
@@ -349,6 +378,29 @@ input::-webkit-datetime-edit-year-field:focus {
   background-color: rgb(232, 240, 254) !important;
   color: black;
   outline: none;
+}
+
+input::-webkit-datetime-edit-hour-field:focus,
+input::-webkit-datetime-edit-minute-field:focus {
+  background-color: rgb(232, 240, 254) !important;
+  color: black;
+  outline: none;
+}
+
+#gig-card {
+  transition: 0.33s ease all;
+  border-radius: 0.375rem !important;
+}
+
+#gig-card:hover {
+  cursor: pointer;
+  background: #e2e3e5 !important;
+  transition: 0.33s ease all;
+}
+
+#gig-card:active {
+  background: #e2e3e5 !important;
+  transition: 0.33s ease all;
 }
 
 @media only screen and (max-width: 1200px) {

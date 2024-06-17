@@ -27,3 +27,4 @@ dist-ssr
 ../src/components/Charts-Carousel.jsx
 ../src/pages/Home.jsx
 ../src/firebase.jsx
+../src/Eventbrite.jsx

@@ -65,7 +65,7 @@ function Charts({ accessToken }) {
         Charts &nbsp;{" "}
         <DropdownButton
           itemType="button"
-          id="dropdown-basic-button"
+          id="unstyled-dropdown"
           title={chartLocation}
           variant="light"
           size="lg"

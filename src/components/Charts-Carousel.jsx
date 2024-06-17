@@ -47,7 +47,7 @@ function ChartsCarousel({ charts, isLoading, error }) {
             <li key={`#1`} id="song-Item">
               <SwiperSlide key={`#1`}>
                 <Card
-                  className="text-start"
+                  className="text-start border-0"
                   border="secondary"
                   style={{
                     width: "18rem",
@@ -75,7 +75,7 @@ function ChartsCarousel({ charts, isLoading, error }) {
             <li key={`#2`} id="song-Item">
               <SwiperSlide key={`#2`}>
                 <Card
-                  className="text-start"
+                  className="text-start border-0"
                   border="secondary"
                   style={{
                     width: "18rem",
@@ -103,7 +103,7 @@ function ChartsCarousel({ charts, isLoading, error }) {
             <li key={`#3`} id="song-Item">
               <SwiperSlide key={`#3`}>
                 <Card
-                  className="text-start"
+                  className="text-start border-0"
                   border="secondary"
                   style={{
                     width: "18rem",
@@ -131,7 +131,7 @@ function ChartsCarousel({ charts, isLoading, error }) {
             <li key={`#4`} id="song-Item">
               <SwiperSlide key={`#4`}>
                 <Card
-                  className="text-start"
+                  className="text-start border-0"
                   border="secondary"
                   style={{
                     width: "18rem",
@@ -159,7 +159,7 @@ function ChartsCarousel({ charts, isLoading, error }) {
             <li key={`#5`} id="song-Item">
               <SwiperSlide key={`#5`}>
                 <Card
-                  className="text-start"
+                  className="text-start border-0"
                   border="secondary"
                   style={{
                     width: "18rem",
@@ -245,7 +245,7 @@ function ChartsCarousel({ charts, isLoading, error }) {
                 <li key={`#${index + 1} ${song.track.name}`} id="song-Item">
                   <SwiperSlide key={`#${index + 1} ${song.track.name}`}>
                     <Card
-                      className="text-start"
+                      className="text-start border-0"
                       border="secondary"
                       style={{
                         width: "18rem",

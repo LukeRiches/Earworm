@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useSearchParams } from "react-router-dom";
 import Header from "./components/Header.jsx";
 import Error from "./pages/Error.jsx";
 import Home from "./pages/Home.jsx";
@@ -8,24 +8,28 @@ import Login from "./pages/Login.jsx";
 import SignUp from "./pages/Sign-Up.jsx";
 import Profile from "./pages/Profile.jsx";
 import { onAuthStateChanged } from "firebase/auth";
-import { doc, getDoc } from "firebase/firestore";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { auth, db } from "./Firebase";
 import Settings from "./pages/Settings.jsx";
 import UpdateEmail from "./pages/Update-Email.jsx";
 import UpdatePassword from "./pages/Update-Password.jsx";
 import DeleteAccount from "./pages/Delete-Account.jsx";
+import axios from "axios";
 
 function App() {
   const [signedIn, setSignedIn] = useState(undefined);
   const [buttonsDisabled, setButtonsDisabled] = useState(false);
   const [user, setUser] = useState(undefined);
   const [userData, setUserData] = useState(undefined);
+  const [gettingUser, setGettingUser] = useState(true);
 
   const getUserData = async (user) => {
+    setGettingUser(true);
     const docRef = doc(db, "users", user.uid);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
       setUserData(docSnap.data());
+      setGettingUser(false);
     }
   };
 
@@ -51,7 +55,18 @@ function App() {
       <Routes>
         <Route path="*" element={<Error />} />
 
-        <Route path="/" element={<Home />}></Route>
+        <Route
+          path="/"
+          element={
+            <Home
+              user={user}
+              userData={userData}
+              gettingUser={gettingUser}
+              buttonsDisabled={buttonsDisabled}
+              setButtonsDisabled={setButtonsDisabled}
+            />
+          }
+        ></Route>
 
         <Route path="/about" element={<About />}></Route>
 
@@ -77,7 +92,10 @@ function App() {
               <Route
                 path="delete"
                 element={
-                  <DeleteAccount setButtonsDisabled={setButtonsDisabled} />
+                  <DeleteAccount
+                    setButtonsDisabled={setButtonsDisabled}
+                    user={user}
+                  />
                 }
               ></Route>
             </>

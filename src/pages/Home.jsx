@@ -2,11 +2,16 @@ import { useEffect, useState } from "react";
 import Hero from "../components/Home-Hero";
 import axios from "axios";
 import Charts from "../components/Charts";
+import Gigs from "../components/Gigs";
+import { accessTokenRequestBody } from "../Spotify";
 
-function Home({ setUser, setSignedIn }) {
-  const [accessTokenRequestBody, setAccessTokenRequestBody] = useState(
-    "grant_type=client_credentials&client_id=9aba404462ca4df5888842e7d93bed88&client_secret=d667a5b721ca423fb89cf355ad12242f"
-  );
+function Home({
+  user,
+  userData,
+  gettingUser,
+  buttonsDisabled,
+  setButtonsDisabled,
+}) {
   const [accessToken, setAccessToken] = useState(null);
 
   useEffect(() => {
@@ -35,6 +40,13 @@ function Home({ setUser, setSignedIn }) {
         // isLoading={isLoading}
         // error={error}
         accessToken={accessToken}
+      />
+      <Gigs
+        user={user}
+        userData={userData}
+        gettingUser={gettingUser}
+        buttonsDisabled={buttonsDisabled}
+        setButtonsDisabled={setButtonsDisabled}
       />
     </section>
   );
