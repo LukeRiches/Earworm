@@ -4,8 +4,11 @@ import axios from "axios";
 import Charts from "../components/Charts";
 
 function Home({ setUser, setSignedIn }) {
+  const CLIENTID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
+  const CLIENTSECRET = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;
+
   const [accessTokenRequestBody, setAccessTokenRequestBody] = useState(
-    "grant_type=client_credentials&client_id=9aba404462ca4df5888842e7d93bed88&client_secret=d667a5b721ca423fb89cf355ad12242f"
+    `grant_type=client_credentials&client_id=${CLIENTID}&client_secret=${CLIENTSECRET}`
   );
   const [accessToken, setAccessToken] = useState(null);
 
