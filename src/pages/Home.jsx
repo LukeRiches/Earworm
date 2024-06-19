@@ -6,12 +6,20 @@ import Gigs from "../components/Gigs";
 import { accessTokenRequestBody } from "../Spotify";
 
 function Home({
+  setUser,
+  setSignedIn,
   user,
   userData,
   gettingUser,
   buttonsDisabled,
   setButtonsDisabled,
 }) {
+  const CLIENTID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
+  const CLIENTSECRET = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;
+
+  const [accessTokenRequestBody, setAccessTokenRequestBody] = useState(
+    `grant_type=client_credentials&client_id=${CLIENTID}&client_secret=${CLIENTSECRET}`
+  );
   const [accessToken, setAccessToken] = useState(null);
 
   useEffect(() => {

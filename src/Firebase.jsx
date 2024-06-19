@@ -9,10 +9,12 @@ import {
 } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
+const APIKEY = import.meta.env.VITE_FIREBASE_API_KEY;
+
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyByYg9UrNvL_YIlcdTCmcCvaxTQqtZ1r8M",
+  apiKey: APIKEY,
   authDomain: "catchy-73a77.firebaseapp.com",
   projectId: "catchy-73a77",
   storageBucket: "catchy-73a77.appspot.com",

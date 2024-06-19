@@ -23,8 +23,4 @@ dist-ssr
 *.sln
 *.sw?
 
-../src/components/Charts.jsx
-../src/components/Charts-Carousel.jsx
-../src/pages/Home.jsx
-../src/firebase.jsx
-../src/Eventbrite.jsx
+.env
