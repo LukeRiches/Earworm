@@ -3,7 +3,6 @@ import Hero from "../components/Home-Hero";
 import axios from "axios";
 import Charts from "../components/Charts";
 import Gigs from "../components/Gigs";
-import { accessTokenRequestBody } from "../Spotify";
 
 function Home({
   setUser,
