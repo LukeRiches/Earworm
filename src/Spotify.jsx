@@ -1,2 +1,0 @@
-export const accessTokenRequestBody =
-  "grant_type=client_credentials&client_id=9aba404462ca4df5888842e7d93bed88&client_secret=d667a5b721ca423fb89cf355ad12242f";
