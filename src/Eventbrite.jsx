@@ -124,8 +124,7 @@ if (
   );
 }
 
-export const APIKey = "DF47ZSWIK4O3FC5US6";
-export const ClientSecret =
-  "QKMFTBTF5CSZQYZZNB5AIM62RVKSIKPFVD4R5AHUITMJF4MFAT";
-export const PrivateToken = "3R75XPVAZGC3HKLJJXJL";
-export const PublicToken = "MUYYIJAQ2WJ4KMOAL7A3";
+const APIKey = import.meta.env.VITE_EVENTBRITE_API_KEY;
+const ClientSecret = import.meta.env.VITE_EVENTBRITE_CLIENT_SECRET;
+const PrivateToken = import.meta.env.VITE_EVENTBRITE_PRIVATE_TOKEN;
+const PublicToken = import.meta.env.VITE_EVENTBRITE_PRIVATE_TOKEN;
