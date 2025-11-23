@@ -15,8 +15,7 @@ function HomeHero() {
           a radio station on the opposite side of the globe!
         </p> */}
         <p className="lead mb-0">
-          Browse the hottest tracks around the world! Click them to give them a
-          listen over on &nbsp;
+          Browse the hottest tracks around the world! Click on them to listen over on &nbsp;
           <Link
             to="https://open.spotify.com/"
             className="alert-link link-animation"
