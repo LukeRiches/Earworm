@@ -251,52 +251,61 @@ function ChartsCarousel({ charts, isLoading, error }) {
                         width: "18rem",
                       }}
                     >
-                      <Card.Img
-                        id="Track-Cover"
-                        variant="top"
-                        src={song.track.album.images[0].url}
-                        alt={`${song.track.name}'s cover art`}
-                      />
-                      <Card.Body>
-                        <Card.Text id="Chart-Number">{`#${
-                          index + 1
-                        }`}</Card.Text>
-                        <Card.Title>
-                          {`${song.track.name}`}
-                          {"  "}
-                          {song.track.explicit ? (
-                            <BsExplicitFill className="explicit-icon" />
-                          ) : null}
-                        </Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted">{`${song.track.artists[0].name}`}</Card.Subtitle>
-
-                        <audio
-                          ref={myRef}
-                          src={song.track.preview_url}
-                          onEnded={handleEnd}
+                      <a
+                        href={song.track.external_urls.spotify}
+                        className="card-link clickable"
+                        target="_blank"
+                      >
+                        <Card.Img
+                          id="Track-Cover"
+                          variant="top"
+                          src={song.track.album.images[0].url}
+                          alt={`${song.track.name}'s cover art`}
                         />
+                        <Card.Body>
+                          <Card.Text id="Chart-Number">{`#${
+                            index + 1
+                          }`}</Card.Text>
+                          <Card.Title>
+                            {`${song.track.name}`}
+                            {"  "}
+                            {song.track.explicit ? (
+                              <BsExplicitFill className="explicit-icon" />
+                            ) : null}
+                          </Card.Title>
+                          <Card.Subtitle className="mb-2 text-muted">{`${song.track.artists[0].name}`}</Card.Subtitle>
+                          {/* <Card.Link
+                          href={song.track.external_urls.spotify}
+                          className="stretched-link"
+                        ></Card.Link> */}
+                          <audio
+                            ref={myRef}
+                            src={song.track.preview_url}
+                            onEnded={handleEnd}
+                          />
 
-                        {song.track.preview_url !== null ? (
-                          isPlaying === false ? (
-                            <button
-                              onClick={play}
-                              className="card-img-overlay"
-                              variant="secondary"
-                            >
-                              ▶️
-                            </button>
-                          ) : (
-                            <button
-                              onClick={pause}
-                              className="card-img-overlay"
-                              id="pause-button"
-                              variant="secondary"
-                            >
-                              ⏸️
-                            </button>
-                          )
-                        ) : null}
-                      </Card.Body>
+                          {song.track.preview_url !== null ? (
+                            isPlaying === false ? (
+                              <button
+                                onClick={play}
+                                className="card-img-overlay"
+                                variant="secondary"
+                              >
+                                ▶️
+                              </button>
+                            ) : (
+                              <button
+                                onClick={pause}
+                                className="card-img-overlay"
+                                id="pause-button"
+                                variant="secondary"
+                              >
+                                ⏸️
+                              </button>
+                            )
+                          ) : null}
+                        </Card.Body>
+                      </a>
                     </Card>
                   </SwiperSlide>
                 </li>

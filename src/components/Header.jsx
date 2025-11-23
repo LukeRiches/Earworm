@@ -38,6 +38,14 @@ function Header({
       });
   };
 
+  const toLoginPage = () => {
+    navigate(`/login`);
+  };
+
+  const toSignUpPage = () => {
+    navigate(`/signup`);
+  };
+
   return (
     //Header with just brand
     // <Navbar fixed="top" bg="light" data-bs-theme="light">
@@ -108,39 +116,37 @@ function Header({
               signedIn === undefined ? null : signedIn === false ? (
                 buttonsDisabled === true ? (
                   <div id="login-and-signup-buttons">
-                    <a>
-                      <Button
-                        variant="outline-primary"
-                        className="nav-button-link nav-buttons"
-                        disabled={buttonsDisabled}
-                      >
-                        Login
-                      </Button>
-                    </a>
-                    <a href="">
-                      <Button
-                        className="nav-button-link nav-buttons"
-                        disabled={buttonsDisabled}
-                      >
-                        Sign-up
-                      </Button>
-                    </a>
+                    <Button
+                      variant="outline-primary"
+                      className="nav-button-link nav-buttons"
+                      disabled={buttonsDisabled}
+                    >
+                      Login
+                    </Button>
+
+                    <Button
+                      className="nav-button-link nav-buttons"
+                      disabled={buttonsDisabled}
+                    >
+                      Sign-up
+                    </Button>
                   </div>
                 ) : (
                   <div id="login-and-signup-buttons">
-                    <NavLink to="/login">
-                      <Button
-                        variant="outline-primary"
-                        className="nav-button-link nav-buttons"
-                      >
-                        Login
-                      </Button>
-                    </NavLink>
-                    <NavLink to="/signup">
-                      <Button className="nav-button-link nav-buttons">
-                        Sign-up
-                      </Button>
-                    </NavLink>
+                    <Button
+                      variant="outline-primary"
+                      className="nav-button-link nav-buttons"
+                      onClick={toLoginPage}
+                    >
+                      Login
+                    </Button>
+
+                    <Button
+                      className="nav-button-link nav-buttons"
+                      onClick={toSignUpPage}
+                    >
+                      Sign-up
+                    </Button>
                   </div>
                 )
               ) : null

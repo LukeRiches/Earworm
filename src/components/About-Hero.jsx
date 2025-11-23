@@ -19,8 +19,8 @@ function AboutHero() {
         <p className="lead mb-4">
           My goal is to bridge the current divide in the streaming industry by
           syncing your music libraries from across different platforms in one
-          place to get suggestions based on your entire listening history! Plus
-          way more 😏
+          place to get suggestions based on your entire listening history!{" "}
+          <br /> Plus way more 😏
         </p>
       </div>
     </div>

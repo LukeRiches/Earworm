@@ -32,11 +32,12 @@ function Features({}) {
                 </h2>
                 <p className="text-start">
                   So far my app is pretty barebones 😅, but is starting to take
-                  form introducing some core functionality. Why not{" "}
+                  form introducing some core functionality.
+                  <br />
+                  Why not{" "}
                   <Link to="/" className="alert-link link-animation">
-                    check out the charts
-                  </Link>{" "}
-                  and hear a preview of some of the tracks?
+                    check out the top charts around the world?
+                  </Link>
                 </p>
               </div>
 
@@ -59,7 +60,7 @@ function Features({}) {
                       Charts
                     </h4>
                     <p className="text-body-secondary me-auto text-start">
-                      Check out the Top 50 songs Globally, in the US and UK!
+                      Check out the Top 50 songs in the UK, USA and more!
                     </p>
                   </div>
                 </div>
@@ -98,7 +99,8 @@ function Features({}) {
                       Profiles for Artists
                     </h4>
                     <p className="text-body-secondary me-auto text-start">
-                      Sign up and share your upcoming gigs with the community!
+                      Sign up and get ready to share your upcoming gigs with the
+                      community!
                     </p>
                   </div>
 

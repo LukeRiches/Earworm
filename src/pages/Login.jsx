@@ -70,6 +70,10 @@ function Login({ buttonsDisabled, setButtonsDisabled }) {
       });
   };
 
+  const toSignUpPage = () => {
+    navigate(`/signup`);
+  };
+
   return (
     <section className="mt-4">
       <Form className="form-signin w-100 m-auto">
@@ -115,15 +119,14 @@ function Login({ buttonsDisabled, setButtonsDisabled }) {
             Or Sign Up
           </Button>
         ) : (
-          <NavLink to="/signup">
-            <Button
-              variant="outline-primary"
-              type="submit"
-              className="w-100 py-2 my-1"
-            >
-              Or Sign Up
-            </Button>
-          </NavLink>
+          <Button
+            variant="outline-primary"
+            type="submit"
+            className="w-100 py-2 my-1"
+            onClick={toSignUpPage}
+          >
+            Or Sign Up
+          </Button>
         )}
 
         <a

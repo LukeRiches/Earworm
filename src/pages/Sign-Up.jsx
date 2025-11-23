@@ -74,6 +74,10 @@ function SignUp({ buttonsDisabled, setButtonsDisabled }) {
     }
   };
 
+  const toLoginPage = () => {
+    navigate(`/login`);
+  };
+
   return (
     <section className="mt-4 mx-5">
       <Form noValidate validated={validated} onSubmit={onSubmit}>
@@ -195,15 +199,16 @@ function SignUp({ buttonsDisabled, setButtonsDisabled }) {
               Or Login
             </Button>
           ) : (
-            <NavLink to="/login" className="mx-auto mb-1 p-0">
-              <Button
-                variant="outline-primary"
-                type="submit"
-                className="w-100 py-2 "
-              >
-                Or Login
-              </Button>
-            </NavLink>
+            // <NavLink to="/login" className="mx-auto mb-1 p-0">
+            <Button
+              variant="outline-primary"
+              type="submit"
+              className="mx-auto py-2 mb-1"
+              onClick={toLoginPage}
+            >
+              Or Login
+            </Button>
+            // </NavLink>
           )}
         </Row>
 
